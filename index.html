@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-Chnage</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .container{
+            margin:200px 300px;
+            padding:50px;
+            background-color: bisque;
+            text-align: center;
+            border-radius: 20px;
+            transition:0.5s;
+            box-shadow:2px 2px 40px;
+        }
+        .container p{
+            background-color:rgba(255, 255, 255, 0.615);
+            border-radius: 20px;
+            padding:15px;
+            margin:20px 200px;
+        }
+        button{
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container"> 
+        <p id="para">Background Color</p>   
+        <button id="button" onclick="change()">Change Color</button>
+    </div>
+</body>
+<script>
+    color=["red", "blue", "green","blueviolet", "pink", "orange", "yellow"];
+    let ind=0;
+    function change(){
+        
+        document.getElementById("container").style.backgroundColor=color[ind];
+        document.getElementById("para").innerText="Background Color:"+color[ind];
+        ind=(ind+1)%color.length;
+    }
+</script>
+</html>
